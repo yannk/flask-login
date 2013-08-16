@@ -371,6 +371,7 @@ class LoginManager(object):
                 ctx.user = user
 
     def _load_from_cookie(self, cookie):
+        user_id = None
         if self.token_callback:
             user = self.token_callback(cookie)
             if user is not None:
